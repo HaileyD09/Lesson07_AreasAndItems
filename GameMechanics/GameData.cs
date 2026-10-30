@@ -30,7 +30,7 @@ public record GameData
     //--------------------------------------------------------------
 
     public bool TryAddArea(Area area) => Areas.TryAdd(area.Name, area);
-    public bool TryAddItem(Item item) => Items.TryAdd(item.Id, item);
+    public bool TryAddItem(Item item) => Items.TryAdd(item.ID, item);
     public bool TryAddCreature(Creature creature) => Creatures.TryAdd(creature.Name, creature);
 
     //--------------------------------------------------------------

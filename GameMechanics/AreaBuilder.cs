@@ -35,6 +35,8 @@ public record AreaBuilder
         {
             _area = _area with { Description = ValidateDescription(description) }
         };
+    
+    public AreaBuilder WithId(string id) => this with { _area = _area with { ID = id } };
 
     /// <summary>
     /// TODO: We need to revisit CreatureBuilder so that they are added into the GameData!

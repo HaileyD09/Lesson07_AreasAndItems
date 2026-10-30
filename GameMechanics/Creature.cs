@@ -16,6 +16,8 @@ public record Creature
     public HealthPoints HealthPoints { get; }
 
     public AbilityScore Abilities { get; }
+    
+    public string ID { get; init; } = string.Empty;
 
     /// <summary>TODO: This is probably an object in its own rite. Experience the party earns for defeating it.</summary>
     public int ExperienceReward { get; }
@@ -29,6 +31,7 @@ public record Creature
         HealthPoints = healthPoints;
         Abilities = abilities;
         ExperienceReward = experienceReward;
+        ID = name;
     }
 
     internal static Creature Create(string name, HealthPoints healthPoints,

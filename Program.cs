@@ -27,6 +27,7 @@ var goblin = StockCreatures.Goblin;
 
 var tree = ItemBuilder
     .FromName("Tree")
+    .WithId("tree-1")
     .WithDescription("A big tree.  It has a lot of leaves.")
     .Build(gameData);
 
@@ -35,7 +36,7 @@ Console.WriteLine(gameData.GetItem(tree!)?.Examine() ?? "nothing to look at");
 // A second tree, with the same name and a key of its own.
 var tree2 = ItemBuilder
     .FromName("Tree")
-    .WithId("tree-2")
+    .WithId("Tree 2")
     .WithDescription("Another big tree.")
     .Build(gameData);
 

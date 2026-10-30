@@ -25,7 +25,7 @@ public record ItemBuilder
     /// <summary>
     /// Gives the item its own key, so that two items can share a name.
     /// </summary>
-    public ItemBuilder WithId(string id) => this with { _item = _item with { Id = id } };
+    public ItemBuilder WithId(string id) => this with { _item = _item with { ID = id } };
     
     
     /// <summary>
@@ -47,7 +47,7 @@ public record ItemBuilder
     public string? Build(GameData gameData)
     {
         if (gameData.TryAddItem(_item))
-            return _item.Id;
+            return _item.ID;
 
         return null;
     }

@@ -5,10 +5,6 @@ namespace TheWorld.GameMechanics;
 /// </summary>
 public record Item
 {
-    /// <summary>
-    /// The item's key in the GameData.  It starts out as the name, and can be anything unique.
-    /// </summary>
-    public string Id { get; init; }
 
     /// <summary>
     /// The name must be provided at construction time.
@@ -20,16 +16,20 @@ public record Item
     /// This is the interesting description of the item, which is shown to the player when they examine it.
     /// </summary>
     public string Description { get; init; } = string.Empty;
+    
+    
+    public string ID { get; init; } = string.Empty;
 
     /// <summary>
     /// Sometimes it is ok to expose a constructor, but not always. 
     /// </summary>
     /// <param name="name"></param>
     /// <param name="description"></param>
+    /// <param name="id"></param>
     /// <returns></returns>
     internal Item(string name, string description)
     {
-        Id = name;
+        ID = name;
         Name = name;
         Description = description;
     }
